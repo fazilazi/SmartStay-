@@ -1,0 +1,206 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   PAGE
+========================= */
+
+.booking-page {
+  min-height: 100vh;
+  background: #f4f6f8;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.booking-navbar {
+  width: 100%;
+  background: #031733;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 30px;
+}
+
+.booking-navbar h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.booking-navbar button {
+  background: white;
+  color: #0d6efd;
+  border: none;
+
+  padding: 8px 14px;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.booking-navbar button:hover {
+  background: #eaf1ff;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.booking-container {
+  min-height: calc(100vh - 65px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 2rem 1rem;
+}
+
+.booking-container > h1 {
+  width: 100%;
+  max-width: 600px;
+
+  margin-bottom: 1.5rem;
+
+  font-size: 1.8rem;
+  color: #222;
+}
+
+/* =========================
+   SELECTED PROPERTY
+========================= */
+
+.booking-property-card {
+  background: white;
+
+  width: 100%;
+  max-width: 600px;
+
+  padding: 1rem 1.2rem;
+
+  border-radius: 12px;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+  margin-bottom: 1.5rem;
+
+  border-left: 4px solid #0d6efd;
+}
+
+.booking-property-card h2 {
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.booking-property-card p {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.booking-property-card h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #0d6efd;
+  margin: 10px 0;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.booking-form {
+  width: 100%;
+  max-width: 600px;
+
+  background: white;
+
+  border-radius: 16px;
+
+  padding: 2rem;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-form label {
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  color: #444;
+
+  margin-bottom: 5px;
+  margin-top: 1rem;
+}
+
+.booking-form label:first-child {
+  margin-top: 0;
+}
+
+.booking-form input {
+  width: 100%;
+
+  padding: 10px 14px;
+
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+
+  font-size: 0.95rem;
+
+  outline: none;
+  color: #333;
+}
+
+.booking-form input:focus {
+  border-color: #0d6efd;
+}
+
+/* =========================
+   CONFIRM BUTTON
+========================= */
+
+.booking-form button {
+  width: 100%;
+
+  padding: 13px;
+
+  background: #0d6efd;
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  margin-top: 1.5rem;
+
+  transition: background 0.2s;
+}
+
+.booking-form button:hover {
+  background: #0056b3;
+}
+
+.booking-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+

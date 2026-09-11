@@ -1,0 +1,470 @@
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.browse-page {
+  min-height: 100vh;
+  background: #f4f6f8;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.browse-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 40px;
+
+  background: #0d6efd;
+  color: white;
+}
+
+.browse-logo {
+  color: white;
+  font-size: 1.4rem;
+}
+
+.browse-nav-links {
+  display: flex;
+  gap: 20px;
+
+  list-style: none;
+}
+
+.browse-nav-links a {
+  color: white;
+  text-decoration: none;
+
+  font-weight: 500;
+}
+
+.browse-nav-links a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.browse-header {
+  background: linear-gradient(
+    to right,
+    #0d6efd,
+    #5a9dfc
+  );
+
+  color: white;
+
+  padding: 3rem 3rem;
+
+  text-align: center;
+}
+
+.browse-header h1 {
+  margin-bottom: 0.5rem;
+
+  font-size: 2rem;
+}
+
+.browse-header p {
+  font-size: 1rem;
+
+  opacity: 0.9;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.browse-container {
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 2rem 1rem;
+}
+
+
+/* =========================
+   FILTER TITLE
+========================= */
+
+.filter-title {
+  margin-bottom: 1rem;
+
+  color: #333;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================
+   CATEGORY BUTTONS
+========================= */
+
+.category-btns {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+
+  margin-bottom: 2rem;
+}
+
+.cat-btn {
+  padding: 0.7rem 1.8rem;
+
+  border: 2px solid #ddd;
+
+  border-radius: 8px;
+
+  background: white;
+
+  color: #555;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.cat-btn:hover {
+  border-color: #0d6efd;
+  color: #0d6efd;
+}
+
+.cat-btn.active {
+  background: #0d6efd;
+
+  border-color: #0d6efd;
+
+  color: white;
+}
+
+
+/* =========================
+   ROOM LIST
+========================= */
+
+.filter-rooms {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1rem;
+}
+
+
+/* =========================
+   ROOM CARD
+========================= */
+
+.filter-room-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1.2rem;
+
+  width: 100%;
+
+  padding: 1rem 1.5rem;
+
+  background: white;
+
+  border: 1px solid #eee;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.06);
+
+  transition: all 0.2s ease;
+
+  overflow: hidden;
+}
+
+.filter-room-card:hover {
+  background: #f0f4ff;
+
+  border-color: #0d6efd;
+
+  transform: translateX(4px);
+}
+
+
+/* =========================
+   ROOM IMAGE BOX
+========================= */
+
+.filter-room-icon {
+  width: 70px;
+  height: 70px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #f0f4ff;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   IMPORTANT IMAGE FIX
+========================= */
+
+.filter-room-icon img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+
+/* =========================
+   ROOM INFORMATION
+========================= */
+
+.filter-room-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.filter-room-info h4 {
+  margin-bottom: 3px;
+
+  color: #222;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.filter-room-info p {
+  margin-bottom: 4px;
+
+  color: #888;
+
+  font-size: 0.85rem;
+}
+
+
+/* =========================
+   CATEGORY
+========================= */
+
+.filter-room-category {
+  display: inline-block;
+
+  padding: 2px 10px;
+
+  background: #e0eaff;
+
+  color: #0d6efd;
+
+  border-radius: 20px;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+
+/* =========================
+   PRICE
+========================= */
+
+.filter-room-price {
+  flex-shrink: 0;
+
+  color: #0d6efd;
+
+  font-size: 1.1rem;
+
+  font-weight: 800;
+
+  text-align: right;
+}
+
+.filter-room-price span {
+  color: #888;
+
+  font-size: 0.8rem;
+
+  font-weight: 400;
+}
+
+
+/* =========================
+   LOADING / ERROR / EMPTY
+========================= */
+
+.rooms-message {
+  padding: 30px 10px;
+
+  color: #777;
+
+  font-size: 1rem;
+
+  text-align: center;
+}
+
+.rooms-message.error {
+  color: #dc3545;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .browse-navbar {
+    padding: 14px 20px;
+  }
+
+  .browse-nav-links {
+    gap: 10px;
+  }
+
+  .browse-nav-links a {
+    font-size: 13px;
+  }
+
+  .browse-header {
+    padding: 2.5rem 1rem;
+  }
+
+  .browse-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .browse-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .filter-room-card {
+    padding: 0.9rem 1rem;
+
+    gap: 0.9rem;
+  }
+
+  .filter-room-icon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .filter-room-price {
+    font-size: 1rem;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 500px) {
+  .browse-navbar {
+    flex-direction: column;
+
+    gap: 12px;
+
+    padding: 14px;
+  }
+
+  .browse-nav-links {
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  .category-btns {
+    gap: 8px;
+  }
+
+  .cat-btn {
+    padding: 0.6rem 1rem;
+
+    font-size: 0.85rem;
+  }
+
+  .filter-room-card {
+    gap: 0.8rem;
+
+    padding: 0.8rem;
+  }
+
+  .filter-room-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .filter-room-info h4 {
+    font-size: 0.9rem;
+  }
+
+  .filter-room-info p {
+    font-size: 0.78rem;
+  }
+
+  .filter-room-category {
+    font-size: 0.7rem;
+  }
+
+  .filter-room-price {
+    font-size: 0.9rem;
+  }
+
+  .filter-room-price span {
+    font-size: 0.7rem;
+  }
+}

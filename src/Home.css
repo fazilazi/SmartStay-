@@ -1,0 +1,266 @@
+.home-page * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.home-page .navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #0d6efd;
+  color: white;
+}
+
+.home-page .nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.home-page .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.home-page .nav-links a:hover {
+  text-decoration: underline;
+}
+
+.home-page .hero {
+  height: 49vh;
+  background: linear-gradient(to right, #0d6efd, #5a9dfc);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home-page .hero p {
+  margin-top: 4px;
+  font-size: 1rem;
+}
+
+.home-page .hero button {
+  margin-top: 20px;
+  padding: 13px 25px;
+  border: none;
+  background: white;
+  color: #0d6efd;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.home-page .hero button:hover {
+  background: #f0f4ff;
+}
+
+.home-page .search-box {
+  position: relative;
+  width: 400px;
+  margin-top: 1.5rem;
+}
+
+.home-page .search-input {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  border-radius: 25px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  color: #333;
+}
+
+.home-page .search-results {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 999;
+  overflow: hidden;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.home-page .search-item {
+  display: block;
+  padding: 0.8rem 1.2rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.home-page .search-item:hover {
+  background: #f0f4ff;
+  color: #0d6efd;
+}
+
+.home-page .no-result {
+  padding: 0.8rem 1.2rem;
+  color: #999;
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.home-page .filter-section {
+  padding: 2rem 3rem;
+  background: white;
+  border-top: 3px solid #0d6efd;
+}
+
+.home-page .filter-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.home-page .category-btns {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.home-page .cat-btn {
+  padding: 0.7rem 1.8rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: #555;
+  transition: all 0.2s;
+}
+
+.home-page .cat-btn:hover {
+  border-color: #0d6efd;
+  color: #0d6efd;
+}
+
+.home-page .cat-btn.active {
+  background: #0d6efd;
+  border-color: #0d6efd;
+  color: white;
+}
+
+.home-page .filter-rooms {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.home-page .filter-room-card {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  border: 1px solid #eee;
+  transition: all 0.2s;
+}
+
+.home-page .filter-room-card:hover {
+  background: #f0f4ff;
+  border-color: #0d6efd;
+  transform: translateX(4px);
+}
+
+.home-page .filter-room-icon {
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  flex-shrink: 0;
+}
+
+.home-page .filter-room-info {
+  flex: 1;
+}
+
+.home-page .filter-room-info h4 {
+  color: #222;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.home-page .filter-room-info p {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.home-page .filter-room-category {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 2px 10px;
+  background: #e0eaff;
+  color: #0d6efd;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.home-page .filter-room-price {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #0d6efd;
+  text-align: right;
+}
+
+.home-page .filter-room-price span {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #888;
+}
+
+.home-page .features {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 30px;
+  background: #f4f4f4;
+}
+
+.home-page .feature-card {
+  background: white;
+  padding: 20px;
+  width: 260px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-page .about {
+  padding: 25px;
+  text-align: center;
+}
+
+.home-page .footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: small;
+}
