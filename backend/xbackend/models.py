@@ -120,3 +120,4 @@ class RoomImage(Base):
 
     room = relationship("Room", back_populates="images")
 
+
