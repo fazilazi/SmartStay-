@@ -76,6 +76,7 @@ def getuser( db=Depends(get_db)):
     return users
 
 
+
 @app.post("/users", response_model=UserResponse)
 def postuser(user:Usercreate,db=Depends(get_db)):
     db_user = User(name=user.name,age=user.age)
