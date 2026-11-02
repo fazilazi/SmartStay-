@@ -71,9 +71,10 @@ def getuser( db=Depends(get_db)):
     users=db.query(User).all()
 
     if users is None:
-        raise HTTPException(status_code=404,detail="user ila poda punda")
+        raise HTTPException(status_code=404,detail="user not found")
 
     return users
+
 
 @app.post("/users", response_model=UserResponse)
 def postuser(user:Usercreate,db=Depends(get_db)):
@@ -97,6 +98,8 @@ def update(user:UserUpdate,id:int,db=Depends(get_db)):
     db_user.age=user.age    
 
     db.commit()
+    
+    
     return db_user
 
 @app.delete("/users/{id}")
